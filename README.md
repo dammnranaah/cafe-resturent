@@ -106,6 +106,3 @@ lib/
 Any platform supporting Next.js (e.g., Vercel, Netlify). Typical steps:
 1. Build: `npm run build`
 2. Deploy the `.next` output via your platform (Vercel auto-detects Next.js)
-
-## License
-MIT
