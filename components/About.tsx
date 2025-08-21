@@ -22,7 +22,7 @@ export const About = () => {
             transition={{ duration: 0.6 }}
             className="mt-4 text-coffee-700"
           >
-            Born from a passion for specialty coffee and seasonal ingredients, Aurum Café blends
+            Born from a passion for specialty coffee and seasonal ingredients, Rana Café blends
             warm hospitality with contemporary tastes. From morning brews to evening bites, we
             craft experiences worth savoring.
           </motion.p>

@@ -8,23 +8,23 @@ export type MenuItem = {
 
 export const menu: Record<string, MenuItem[]> = {
   starters: [
-    { name: 'Bruschetta', description: 'Tomato, basil, garlic on toasted sourdough', price: '$8', image: 'https://images.unsplash.com/photo-1546549039-Ex1?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Pumpkin Soup', description: 'Creamy roasted pumpkin, nutmeg, chive oil', price: '$9', image: 'https://images.unsplash.com/photo-1476127396946-eca0d210a253?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Caprese Salad', description: 'Heirloom tomatoes, buffalo mozzarella, pesto', price: '$10', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop' }
+    { name: 'Shingara', description: 'Crispy pastry stuffed with spiced potato and peas', price: '৳90', image: 'https://images.pexels.com/photos/4553031/pexels-photo-4553031.jpeg' },
+    { name: 'Beguni', description: 'Thin sliced eggplant fritters coated in gram flour', price: '৳80', image: 'https://images.unsplash.com/photo-1506354666786-959d6d497f1a?q=80&w=1200&auto=format&fit=crop' },
+    { name: 'Chicken Pakora', description: 'Lightly spiced chicken dipped in gram batter, deep fried', price: '৳140', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=1200&auto=format&fit=crop' }
   ],
   mains: [
-    { name: 'Herb Chicken', description: 'Grilled chicken, rosemary jus, roasted potatoes', price: '$18', image: 'https://images.unsplash.com/photo-1604908177522-040a3b39a2b8?q=80&w=1200&auto=format&fit=crop', special: true },
-    { name: 'Mushroom Risotto', description: 'Porcini mushrooms, parmesan, truffle oil', price: '$17', image: 'https://images.unsplash.com/photo-1551183053-bf91a1d81141?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Seared Salmon', description: 'Citrus glaze, quinoa, seasonal greens', price: '$20', image: 'https://images.unsplash.com/photo-1466637574441-749b8f19452f?q=80&w=1200&auto=format&fit=crop' }
+    { name: 'Kacchi Biryani', description: 'Fragrant basmati rice with marinated mutton, kewra and saffron', price: '৳380', image: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop', special: true },
+    { name: 'Ilish Bhapa', description: 'Hilsa steamed in mustard paste with yogurt and green chili', price: '৳420', image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?q=80&w=1200&auto=format&fit=crop' },
+    { name: 'Bhuna Khichuri', description: 'Comforting spiced rice and lentil mix, slow-cooked', price: '৳260', image: 'https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&auto=format&fit=crop' }
   ],
   desserts: [
-    { name: 'Cheesecake', description: 'Vanilla bean, berry compote', price: '$8', image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Tiramisu', description: 'Espresso-soaked ladyfingers, mascarpone', price: '$9', image: 'https://images.unsplash.com/photo-1551024709-8f23befc6cf7?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Chocolate Mousse', description: '70% cacao, sea salt, cream', price: '$8', image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476a?q=80&w=1200&auto=format&fit=crop' }
+    { name: 'Mishti Doi', description: 'Caramelized sweet yogurt made from reduced milk', price: '৳120', image: 'https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=1200&auto=format&fit=crop' },
+    { name: 'Rasgulla', description: 'Soft chhena balls soaked in light sugar syrup', price: '৳110', image: 'https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b?q=80&w=1200&auto=format&fit=crop' },
+    { name: 'Patishapta Pitha', description: 'Thin crepes filled with date molasses and coconut', price: '৳130', image: 'https://images.pexels.com/photos/2280545/pexels-photo-2280545.jpeg' }
   ],
   drinks: [
-    { name: 'Flat White', description: 'Velvety microfoam, double shot', price: '$4', image: 'https://images.unsplash.com/photo-1503481766315-7a586b20f66f?q=80&w=1200&auto=format&fit=crop', special: true },
-    { name: 'Pour Over', description: 'Single-origin brew, notes of citrus & cocoa', price: '$5', image: 'https://images.unsplash.com/photo-1494314671902-399b18174975?q=80&w=1200&auto=format&fit=crop' },
-    { name: 'Iced Matcha', description: 'Stone-ground matcha, oat milk', price: '$5', image: 'https://images.unsplash.com/photo-1485808191679-5f86510681a2?q=80&w=1200&auto=format&fit=crop' }
+    { name: 'Masala Chai', description: 'Milk tea infused with cardamom, cinnamon and ginger', price: '৳60', image: 'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=1200&auto=format&fit=crop', special: true },
+    { name: 'Sweet Lassi', description: 'Chilled yogurt drink with milk and sugar', price: '৳90', image: 'https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=1200&auto=format&fit=crop' },
+    { name: 'Green Coconut Water', description: 'Fresh tender coconut water, naturally cooling', price: '৳80', image: 'https://images.pexels.com/photos/1028411/pexels-photo-1028411.jpeg' }
   ],
 }

@@ -1,8 +1,8 @@
 "use client"
-import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { menu } from '@/lib/menu'
 import { Card } from './ui'
+import { FallbackImage } from './FallbackImage'
 
 export const Menu = () => {
   const sections = [
@@ -39,7 +39,14 @@ export const Menu = () => {
                 >
                   <Card className="overflow-hidden">
                     <div className="relative h-40">
-                      <Image src={item.image} alt={item.name} fill className="object-cover" loading="lazy" />
+                      <FallbackImage
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover"
+                        loading="lazy"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
                       {item.special && (
                         <span className="absolute top-3 right-3 bg-gold text-white text-xs px-2 py-1 rounded-full shadow">Special</span>
                       )}

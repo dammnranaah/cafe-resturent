@@ -10,15 +10,13 @@
 html, body {
   background: theme('colors.background');
   color: theme('colors.foreground');
-  scroll-behavior: auto; /* handled by Lenis */
+  scroll-behavior: auto;
 }
 
-/* Smooth section spacing */
 .section {
   @apply py-20 md:py-28;
 }
 
-/* Gold underline for headings */
 .heading-underline {
   position: relative;
 }

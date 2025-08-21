@@ -1,18 +1,16 @@
-import dynamic from 'next/dynamic'
 import { Hero } from '@/components/Hero'
 import { About } from '@/components/About'
 import { Menu } from '@/components/Menu'
 import { Hours } from '@/components/Hours'
 import { Reservation } from '@/components/Reservation'
 import { Location } from '@/components/Location'
-
-const ThreeBackground = dynamic(() => import('@/components/ThreeBackground'), { ssr: false })
+import { HeroBackground } from '@/components/HeroBackground'
 
 export default function HomePage() {
   return (
     <main>
       <section className="relative section overflow-hidden">
-        <ThreeBackground />
+        <HeroBackground />
         <div className="relative z-10">
           <Hero />
         </div>

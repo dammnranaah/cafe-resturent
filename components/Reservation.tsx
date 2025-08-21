@@ -7,7 +7,8 @@ import { motion } from 'framer-motion'
 import { Button, Input, Label, Select, Textarea, Card } from './ui'
 
 const schema = z.object({
-  name: z.string().min(2, 'Name is too short'),
+  firstName: z.string().min(2, 'First name is too short'),
+  lastName: z.string().min(2, 'Last name is too short'),
   email: z.string().email(),
   phone: z.string().min(6),
   date: z.string().min(1),
@@ -19,10 +20,11 @@ const schema = z.object({
 type Values = z.infer<typeof schema>
 
 export const Reservation = () => {
+  const today = new Date().toISOString().split('T')[0]
   const [submitted, setSubmitted] = useState<null | Values>(null)
   const { register, handleSubmit, reset, formState: { errors, isSubmitting } } = useForm<Values>({
     resolver: zodResolver(schema),
-    defaultValues: { guests: '2', time: '19:00' }
+    defaultValues: { guests: '2', time: '19:00', firstName: '', lastName: '' }
   })
 
   const onSubmit = async (values: Values) => {
@@ -43,9 +45,14 @@ export const Reservation = () => {
         <Card className="p-6">
           <form onSubmit={handleSubmit(onSubmit)} className="grid md:grid-cols-2 gap-5">
             <div>
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="John Doe" {...register('name')} />
-              {errors.name && <p className="text-xs text-red-600 mt-1">{errors.name.message}</p>}
+              <Label htmlFor="firstName">First Name</Label>
+              <Input id="firstName" placeholder="e.g., John" {...register('firstName')} />
+              {errors.firstName && <p className="text-xs text-red-600 mt-1">{errors.firstName.message}</p>}
+            </div>
+            <div>
+              <Label htmlFor="lastName">Last Name</Label>
+              <Input id="lastName" placeholder="e.g., Ahmed" {...register('lastName')} />
+              {errors.lastName && <p className="text-xs text-red-600 mt-1">{errors.lastName.message}</p>}
             </div>
             <div>
               <Label htmlFor="email">Email</Label>
@@ -54,13 +61,13 @@ export const Reservation = () => {
             </div>
             <div>
               <Label htmlFor="phone">Phone</Label>
-              <Input id="phone" placeholder="+1 234 567 890" {...register('phone')} />
+              <Input id="phone" placeholder="e.g., +880 1XXX-XXXXXX" {...register('phone')} />
               {errors.phone && <p className="text-xs text-red-600 mt-1">{errors.phone.message}</p>}
             </div>
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="date">Date</Label>
-                <Input id="date" type="date" {...register('date')} />
+                <Input id="date" type="date" min={today} {...register('date')} />
                 {errors.date && <p className="text-xs text-red-600 mt-1">{errors.date.message}</p>}
               </div>
               <div>
@@ -89,7 +96,7 @@ export const Reservation = () => {
             <div className="md:col-span-2 flex items-center gap-3">
               <Button type="submit" disabled={isSubmitting}>Book a Table</Button>
               {submitted && (
-                <span className="text-sm text-coffee-700">Thanks {submitted.name}! We will confirm via email.</span>
+                <span className="text-sm text-coffee-700">Thanks {submitted.firstName}! We will confirm via email.</span>
               )}
             </div>
           </form>

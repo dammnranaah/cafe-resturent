@@ -15,7 +15,6 @@ export const LenisProvider: React.FC<{ children: React.ReactNode }> = ({ childre
     }
     requestAnimationFrame(raf)
     return () => {
-      // @ts-ignore
       lenis.destroy?.()
     }
   }, [])
